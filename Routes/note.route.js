@@ -22,7 +22,7 @@ noteRouter.post("/notes/add", async(req,res)=>{
 
 noteRouter.get("/notes", async(req,res)=>{
     try {
-        let list = await NoteModel.find({userName:req.body.userName})
+        let list = await NoteModel.find({userId:req.body.userId})
         res.status(200).send({"notes": list})
     } catch (error) {
         res.send({"err": error})
