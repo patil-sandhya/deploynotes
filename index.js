@@ -12,7 +12,7 @@ app.use(express.json())
 app.use("/user", userRouter)
 app.use("/note",noteRouter)
 
-app.listen(process.env.PORT, async()=>{
+app.listen(process.env.port, async()=>{
     try {
         await connection
     console.log(`server is running at  ${process.env.PORT} `)
